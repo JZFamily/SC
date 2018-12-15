@@ -89,6 +89,14 @@ local_root=/home/ftp/ 似乎和chroot那边结合可以达到用户列表的效�
 * vsftpd似乎会默认生成一个匿名用户，匿名还会有一个路径
 /var/pub ？？
 有时间了解一下啊
+* 禁止shell登陆
+如果 usermod -s /bin/false showftp 之后不能登陆ftp了
+可以在/etc/shells加 /bin/false
+测试
+ssh xxx@xxx  确实无法登陆
+ftp可以登录
+
+
 * 其他
 暂时记不起来了
 
